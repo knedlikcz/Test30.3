@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: lightblue;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Joke Generator</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <button class="btn btn-primary" id="generate">Generate a Joke</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <h2 id="joke"></h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <button class="btn btn-success" id="like">Like</button>
+                    <button class="btn btn-danger" id="dislike">Dislike</button>
+                    <button class="btn btn-primary" id="generate-new">Generate new</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <button class="btn btn-success" id="liked-jokes">Liked Jokes</button>
+                    <button class="btn btn-danger" id="disliked-jokes">Disliked Jokes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="liked-jokes-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Liked Jokes</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="popup-body">
+                <ul id="liked-jokes-list"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="disliked-jokes-popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Disliked Jokes</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="popup-body">
+                <ul id="disliked-jokes-list"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
